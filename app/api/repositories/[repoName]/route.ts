@@ -14,7 +14,7 @@ export async function GET(
     }
 
     const response = await fetch(
-      `http://localhost:3000/api/repositories/${params.repoName}`,
+      `http://localhost:3000/api/repositories/${await params.repoName}`,
       {
         headers: {
           'Authorization': `Bearer ${session.accessToken}`,
